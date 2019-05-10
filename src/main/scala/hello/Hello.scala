@@ -36,5 +36,15 @@ object Hello {
     val names = List("Fred", "Jim", "Shiela")
     println(s"the first name is ${names(0)}")
     for (s <- names) println(s)
+
+    val sw : Any = "Fred"
+    val msg = sw match {
+      case 99 | 100 | 101 => "It's ninety nine ish..."
+      case x => {
+        println("in the default thingy")
+        s"Something else, specifically ${x}"
+      }
+    }
+    println(msg)
   }
 }
