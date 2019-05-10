@@ -80,3 +80,17 @@ object UseANew {
     println(s"sub is ${sub}")
   }
 }
+
+class Adder {
+  private var myVal = 0
+  def day_= (v : Int) = myVal = v
+  def day: Int = myVal
+}
+
+object TryAdder {
+  def main(args: Array[String]): Unit = {
+    var a = new Adder
+    a.day = 3
+    println(s"day is ${a.day}")
+  }
+}
